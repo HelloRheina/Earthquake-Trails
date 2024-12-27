@@ -14,8 +14,8 @@ This web application visualizes earthquake data in Indonesia, providing an inter
 
 ### 1. **Navigating the Map**:
 - **Zoom In/Out**: Use the scroll wheel on your mouse or the "+" and "-" buttons on the map to zoom in and out of the map. You can zoom into specific regions to see more detailed earthquake markers.
-- **Pan the Map**: Click and drag the map to move it around and explore different areas of Indonesia. This will allow you to focus on specific regions where you might want to examine earthquake activity more closely.
-- **Return to Original Zoom**: Right-click anywhere on the map and select "Reset Zoom" to return to the initial zoom level. This allows you to quickly return to the full view of the map after zooming in.
+- **Pan the Map**: Click and drag the map to move it around and explore different areas of Indonesia. This will allow you to focus on specific regions where you might want to examine earthquake activity more closely. 
+- **Return to Original Zoom**: Right-click anywhere on the map. This allows you to quickly return to the full view of the map after zooming in.
   
 ### 2. **Using the Year Slider**:
 - At the top of the dashboard, you will find a **year slider**.
