@@ -48,7 +48,7 @@ This web application visualizes earthquake data in Indonesia, providing an inter
   - **Deep Earthquakes**: Represented with a third color.
 
 ## Deployed Website:
-click the link
+[https://github.com/HelloRheina/Earthquake-Trails] Click here
 
 ## Future Improvements:
 - **Earthquake Radius Estimation**: After further research, I found that there is no scientifically proven formula for estimating earthquake radius solely based on magnitude. Future versions may attempt to incorporate a more accurate calculation method based on factors like terrain, weather, and depth.
