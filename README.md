@@ -10,31 +10,42 @@ This web application visualizes earthquake data in Indonesia, providing an inter
 - **MapTiler**: A platform used for enhancing map styling and providing custom maps for the geospatial visualization.
 - **Figma**: Used for designing the project's logo, ensuring it was copyright-free.
 
-## Key Features:
-The web application consists of two primary components: the **Geospatial Map** and the **Dashboard**.
+## How to Use the Visualization:
 
-### Geospatial Map:
-The map is centered on Indonesia with initial coordinates of latitude -0.5489 and longitude 155.0149, providing a zoom level of 4.4 to visualize the entire Indonesian archipelago. It features:
-- **Interactive map**: Zoom in and out to focus on specific regions.
-- **Earthquake markers**: Each marker size reflects the magnitude of the earthquake, and the color represents its depth.
-- **Pop-ups**: When clicked, each marker displays detailed information about the earthquake, including magnitude, depth, date, and time.
+### 1. **Navigating the Map**:
+- **Zoom In/Out**: Use the scroll wheel on your mouse or the "+" and "-" buttons on the map to zoom in and out of the map. You can zoom into specific regions to see more detailed earthquake markers.
+- **Pan the Map**: Click and drag the map to move it around and explore different areas of Indonesia. This will allow you to focus on specific regions where you might want to examine earthquake activity more closely.
+- **Return to Original Zoom**: Right-click anywhere on the map and select "Reset Zoom" to return to the initial zoom level. This allows you to quickly return to the full view of the map after zooming in.
+  
+### 2. **Using the Year Slider**:
+- At the top of the dashboard, you will find a **year slider**.
+- Drag the slider to the left or right to select a specific year. The earthquake data and visualizations will dynamically update to reflect the earthquakes that occurred in that year.
+  
+### 3. **Viewing Earthquake Information**:
+- **Click on Earthquake Markers**: On the geospatial map, click on any earthquake marker to view detailed information in a pop-up. The pop-up will display the following information:
+  - **Magnitude**: The magnitude of the earthquake.
+  - **Depth**: The depth of the earthquake beneath the surface.
+  - **Date and Time**: The date and time when the earthquake occurred.
+  
+### 4. **Interacting with the Dashboard Visualizations**:
+- **Yearly Frequency Histogram**: This histogram shows the number of earthquakes per year. The bars will change color as you slide the year slider to a specific year.
+  - The active year is highlighted, and the bar color will update based on the selected year.
+  
+- **Depth-Magnitude Boxplot**: This boxplot shows earthquake magnitudes categorized by depth. It helps you understand how the depth of an earthquake affects its magnitude distribution.
+  - Each depth category (Shallow, Intermediate, Deep) is represented by different colors.
 
-### Dashboard:
-The dashboard integrates multiple data visualizations:
-1. **Yearly Frequency Histogram**: Displays the number of earthquakes per year, allowing users to track trends over time. The histogram updates dynamically based on the selected year using an interactive slider.
-2. **Depth-Magnitude Boxplot**: Shows how earthquake depth affects magnitude. Earthquakes are categorized into Shallow, Intermediate, and Deep categories, with quartile and median values presented.
-3. **Magnitude Frequency Line Graph**: Displays the distribution of earthquake magnitudes in different frequency ranges to understand the most common magnitudes in the selected year.
+- **Magnitude Frequency Line Graph**: This graph displays the frequency of earthquakes for different magnitude ranges.
+  - The line graph will change dynamically based on the selected year from the slider.
 
-### Extra Components:
-- **Year Slider**: Filters the data to focus on earthquakes from a specific year.
-- **Exact Number of Earthquakes**: Displays the total count of earthquakes for the selected year.
-- **Legend**: Explains the color-coding system used in the map and dashboard, indicating the depth categories of earthquakes.
-
-## Implementation Process:
-1. **Data Processing**: The earthquake data from Kaggle was cleaned and structured for integration into the website. Unnecessary features like `dip1`, `dip2`, `strike1`, etc., were removed, and the data was converted to the GEOJSON format for use in the map.
-2. **Color Scheme and Logo Design**: The color scheme was selected using **Coolors.co** to ensure it was accessible and aesthetically pleasing. A simple logo was designed using **Figma**, ensuring it was copyright-free.
-3. **Leaflet and MapTiler Integration**: **Leaflet** was used for creating the interactive map, and **MapTiler** was integrated to provide custom map tiles, ensuring that the dark theme didn't interfere with the marker visibility.
-4. **HTML, CSS, and JavaScript Adjustment**: HTML was used to structure the content, CSS for styling, and JavaScript to manage the interactive elements and update visualizations dynamically.
+### 5. **Using the Exact Number of Earthquakes Display**:
+- The total number of earthquakes for the selected year is displayed below the frequency histogram. This provides users with an exact count of how many earthquakes occurred in the chosen year.
+  
+### 6. **Legend**:
+- The **Legend** is located at the bottom right of the map and dashboard.
+- It explains the color-coding system for earthquake depth:
+  - **Shallow Earthquakes**: Typically shown in one color.
+  - **Intermediate Earthquakes**: Shown in another color.
+  - **Deep Earthquakes**: Represented with a third color.
 
 ## Deployed Website:
 click the link
