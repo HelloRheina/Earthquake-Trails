@@ -1,0 +1,281 @@
+:root {
+    --primary-color: #FF7627; 
+    --secondary-color: #A32EFF; 
+    --background-color: #000; 
+    --text-color: #fff; 
+    --font-family: 'Roboto', sans-serif;
+    --font-size: 12px; 
+    --heading-font-size: 14px; 
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.homepage-logo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(1, 42, 54, 0); 
+    z-index: 1000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0); 
+}
+
+.logo-container img {
+    max-height: 70px;
+    opacity: 1;
+}
+
+#mapid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#legend {
+    position: absolute;
+    right: 10px;
+    bottom: 14%; 
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 5px var(--primary-color),
+        0 0 15px var(--secondary-color);
+    z-index: 1001;
+    width: 200px; 
+}
+
+#legend h2.dashboard-title {
+    font-size: var(--heading-font-size);
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--secondary-color);
+    margin: 0 0 10px 0;
+}
+
+#legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-size);
+    color: var(--text-color);
+}
+
+#legend ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#legend ul li:last-child {
+    margin-bottom: 5;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+}
+
+.map-overlay {
+    font-family: var(--font-family);
+    position: absolute;
+    z-index: 1000;
+    width: 20%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.map-overlay-inner {
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.map-overlay h2 {
+    margin: 0 0 10px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--primary-color), 0 0 10px var(--secondary-color);
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+#dashboard-container {
+    position: absolute;
+    top: 12%;
+    left: 10px;
+    width: 25%;
+    height: 82%;
+    bottom: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 5px var(--primary-color),
+        0 0 15px var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    z-index: 1001;
+}
+
+#dashboard-container h2.dashboard-title {
+    font-size: var(--heading-font-size);
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--secondary-color);
+}
+
+#slider-container {
+    margin: 20px 0;
+    width: 100%;
+}
+
+#slider {
+    width: 100%;
+}
+
+#year-label {
+    text-align: center;
+    font-size: var(--heading-font-size);
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--secondary-color);
+}
+
+#histogram-container {
+    width: 100%;
+    height: 130px;
+}
+
+#histogram {
+    width: 100%;
+    height: 100%;
+}
+
+#histogram-container h2.histogram-output {
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0 0 1px #fff;
+    text-transform: uppercase;
+}
+
+#boxplot-container{
+    width: 100%;
+    height: 300px;
+    margin-top:10px;
+}
+
+#boxplot{
+    width: 100%;
+    height:100%;
+}
+
+#note {
+    position: absolute;
+    right: 10px;
+    bottom: 6%;
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 5px var(--primary-color),
+        0 0 15px var(--secondary-color);
+    z-index: 1001;
+}
+
+#note h2.dashboard-title {
+    font-size: var(--heading-font-size);
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--secondary-color);
+    margin: 0;
+}
+
+#magnitude-graph-container {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    background: rgba(0, 0, 0, 0.7); 
+    color: var(--text-color);
+    padding: 10px 15px; 
+    border-radius: 10px;
+    box-shadow: 
+        0 0 5px var(--primary-color),
+        0 0 15px var(--secondary-color);
+    z-index: 1001;
+    width: 320px; 
+    height: 200px; 
+}
+
+#magnitude-graph-container h2.dashboard-title {
+    font-size: var(--heading-font-size);
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--secondary-color);
+    margin: 0 0 5px 0;
+}
+
+#magnitude-graph {
+    width: 100%; 
+    height: 100%; 
+}
+
